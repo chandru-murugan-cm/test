@@ -1,3 +1,0 @@
-"""
-Swagger/OpenAPI documentation components
-"""
