@@ -246,3 +246,4 @@ docker-compose up
 - MongoDB logs: `/tmp/mongod.log`
 - UI logs: Check browser console
 # test
+# test
