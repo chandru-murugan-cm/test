@@ -1,0 +1,1 @@
+python3 -m unittest discover --start-directory ./tests -p "*_test.py"

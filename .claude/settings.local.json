@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(ss:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(mongosh:*)",
+      "Bash(TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTc2ZjhhZjMzMWQ4MzEzNzA0ZTE4ZTQiLCJ1c2VySWQiOiI2OTc2ZjhhZjMzMWQ4MzEzNzA0ZTE4ZTQiLCJncm91cE5hbWUiOiIiLCJlbWFpbCI6InNhbTEyQGdtYWlsLmNvbSIsIm5hbWUiOiJ0ZXN0IHRlc3QiLCJpYXQiOjE3Njk1MDk5MjEsImV4cCI6MTc3MjEwMTkyMX0.JRXUzp_1JfcOag8zxkdObpHJVz2y5prbmlU9n617PdU\")",
+      "Bash(grep:*)",
+      "Bash(lsof:*)",
+      "Bash(kill:*)",
+      "Bash(python:*)",
+      "Bash(xargs:*)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}
