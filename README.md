@@ -247,3 +247,4 @@ docker-compose up
 - UI logs: Check browser console
 # test
 # test
+# test
