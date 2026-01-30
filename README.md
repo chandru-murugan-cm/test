@@ -245,3 +245,4 @@ docker-compose up
 - Cyber Service logs: Check terminal output
 - MongoDB logs: `/tmp/mongod.log`
 - UI logs: Check browser console
+# test
