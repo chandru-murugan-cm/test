@@ -1,0 +1,23 @@
+{
+  "projects": {
+    "production": "cyberwacht-production",
+    "default": "cybersecurity-435907"
+  },
+  "targets": {
+    "cybersecurity-435907": {
+      "hosting": {
+        "admin-cybersecurity": [
+          "admin-cybersecurity-435907"
+        ]
+      }
+    },
+    "cyberwacht-production": {
+      "hosting": {
+        "admin-cybersecurity": [
+          "admin-cyberwacht-production"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -1,0 +1,52 @@
+- title: Introduction
+  # links:
+  # - title: "Introduction"
+  url: "docs/introduction"
+
+- title: "Setting up your project"
+  url: "docs/project_setup/setup"
+  links:
+    - title: Create Account
+      url: "docs/project_setup/account_creation"
+    - title: Project Setup
+      url: "docs/project_setup/project_setup"
+    - title: Repository
+      url: "docs/project_setup/public"
+      children:
+        - title: Public
+          url: "docs/project_setup/public"
+        - title: Private
+          url: "docs/project_setup/private"
+    - title: Domain
+      url: "docs/project_setup/domain"
+    - title: Web3
+      url: "docs/project_setup/web3"
+
+- title: Scheduler
+  url: "docs/Scheduler/scheduler"
+  links:
+    - title: "Daily"
+      url: "docs/Scheduler/daily"
+- title: Scans
+  url: "docs/Scanner/scans"
+
+- title: Scanners
+  url: "docs/Scanner/scanner"
+  links:
+    - title: "Domain Scanners"
+      url: "docs/Scanner/domain_scanner"
+    - title: "Repository Scanners"
+      url: "docs/Scanner/repo_scanner"
+    - title: "Web3 Scanner"
+      url: "docs/Scanner/web3"
+    - title: "Cloud Scanner"
+      url: "docs/Scanner/cloud"
+- title: Findings
+  url: "docs/findings/findings"
+
+- title: License & SBOM
+  url: "docs/license/license"
+- title: Languages
+  url: "docs/languages/language"
+- title: Releases
+  url: "docs/releases/releases"
